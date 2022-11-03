@@ -1,7 +1,6 @@
-import React from 'react';
+import React from 'react'
 
 const Home = () => {
-
   return (
     <div className="main-content home">
       <h2>Front End Course Directory</h2>
@@ -11,7 +10,7 @@ const Home = () => {
       <hr />
 
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home

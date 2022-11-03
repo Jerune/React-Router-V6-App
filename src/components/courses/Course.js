@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-const Course = ({img, title, desc}) => (
+const Course = ({ img, title, desc }) => (
   <li className="course media group">
     <img className="course-img" src={img} alt="course" />
     <div>
@@ -8,6 +8,6 @@ const Course = ({img, title, desc}) => (
       <p>{desc}</p>
     </div>
   </li>
-);
+)
 
-export default Course;
+export default Course

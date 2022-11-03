@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 const Courses = () => (
   <div className="main-content courses">
     <div className="course-header group">
-      <h2>Courses</h2> 
+      <h2>Courses</h2>
       <ul className="course-nav">
         <li><a href='#'>HTML</a></li>
         <li><a href='#'>CSS</a></li>
@@ -11,6 +11,6 @@ const Courses = () => (
       </ul>
     </div>
   </div>
-);
+)
 
-export default Courses;
+export default Courses
