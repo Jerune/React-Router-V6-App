@@ -20,7 +20,7 @@ function App () {
         <Route path='about' element={<About />} />
         <Route path='teachers'>
             <Route index element={<Teachers />}/>
-            <Route path=':topic/:lname-:fname' element={<Featured />} />
+            <Route path=':topic/:name' element={<Featured />} />
         </Route>
         <Route path='courses' element={<Courses />}>
           <Route index element={<Navigate to='html' />} />

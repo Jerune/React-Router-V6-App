@@ -2,8 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 const Featured = () => {
-  const { lname, fname, topic } = useParams()
-  const name = `${lname} ${fname}`
+  const { name, topic } = useParams()
 
   return (
     <div className="main-content">

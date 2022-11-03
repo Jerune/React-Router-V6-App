@@ -1,7 +1,20 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+// @ts-nocheck
+import React, { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+  const name = useRef()
+  const topic = useRef()
+  const navigate = useNavigate()
+
+  function handleSubmit (event) {
+    event.preventDefault()
+    const teacherName = name.current.value
+    const teacherTopic = topic.current.value
+    const path = `teachers/${teacherTopic}/${teacherName}`
+    navigate(path)
+  }
+
   return (
     <div className="main-content home">
       <h2>Front End Course Directory</h2>
@@ -10,7 +23,11 @@ const Home = () => {
       <p>We have thousands of videos created by expert teachers on web design and front end development. Our library is continually refreshed with the latest on web technology so you will never fall behind.</p>
       <hr />
       <h3>Featured Teachers</h3>
-      <Link to='teachers/HTML/Tommy'>Tommy Wingo</Link>
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Name" ref={name}/>
+        <input type="text" placeholder="Topic" ref={topic}/>
+        <button type="submit">Go!</button>
+      </form>
     </div>
   )
 }
