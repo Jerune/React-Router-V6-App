@@ -1,9 +1,9 @@
 import React from 'react'
 import Course from './Course'
-import { CSSCourses } from '../../data/courses'
+import PropTypes from 'prop-types'
 
-const CSS = (props) => {
-  const courses = CSSCourses.map((course) => {
+const CourseContainer = ({ data }) => {
+  const courses = data.map((course) => {
     return (
       <Course
         title={course.title}
@@ -22,4 +22,8 @@ const CSS = (props) => {
   )
 }
 
-export default CSS
+CourseContainer.propTypes = {
+  data: PropTypes.array
+}
+
+export default CourseContainer
